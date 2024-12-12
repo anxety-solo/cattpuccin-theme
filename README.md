@@ -12,48 +12,17 @@
 </p>
 
 <p align="center">
-	<img src="/assets/res.webp"/>
+	<img src="/assets/screenshot.webp"/>
 </p>
-
-## Previews
-
-<details>
-<summary>🌻 Latte</summary>
-<img src="/assets/latte.webp"/>
-</details>
-<details>
-<summary>🪴 Frappé</summary>
-<img src="/assets/frappe.webp"/>
-</details>
-<details>
-<summary>🌺 Macchiato</summary>
-<img src="/assets/macchiato.webp"/>
-</details>
-<details>
-<summary>🌿 Mocha</summary>
-<img src="/assets/mocha.webp"/>
-</details>
-
-## Usage
 
 ### Extension (Recommended)
 
 1. Open WebUI
 2. Click on the "Extensions" tab
 3. Click on the "Install from URL" subsection
-4. Paste `https://github.com/catppuccin/stable-diffusion-webui` into the URL spot, set the local directory name to `Catppuccin Theme`, and install
+4. Paste `https://github.com/younyokel/charcoal-webui-theme/` into the URL spot, set the local directory name to `Catppuccin Theme`, and install
 5. Go to "Installed" subsection and click "Apply and restart UI"
 6. Configure the theme from the "Settings" tab under "Catppuccin Theme", afterwards you must "Apply Settings" and "Reload UI"
-
-### Extension (Extension index)
-
-NOTE: This method will install the theme under the name "stable-diffusion-webui". You can read more about this issue in the next section.
-
-1. Open WebUI
-2. Click on the "Extensions" tab and navigate to "Available"
-3. Click "Load From:" and find and install "Catppuccin Theme" from the list
-4. Go to "Installed" subsection and click "Apply and restart UI"
-5. Configure the theme from the "Settings" tab under "Catppuccin Theme", afterwards you must "Apply Settings" and "Reload UI"
 
 ### Add directly
 
@@ -61,10 +30,6 @@ NOTE: This method will install the theme under the name "stable-diffusion-webui"
 2. Create the file `user.css` in your stable-diffusion-webui directory
 3. Copy the contents of the desired flavor into `user.css`
 4. Restart the Web UI or click "Reload UI" at the bottom of the screen
-
-## NOTE
-
-Due to catppuccin naming conventions and limitations in webui's extension names, this extension will come up as "stable-diffusion-webui" in the extension update section. I have proposed a solution to WebUI [here](https://github.com/catppuccin/stable-diffusion-webui/issues/5#issuecomment-1420599298), feel free to upvote it increase the chances of this issue being resolved.
 
 ## 🙋 FAQ
 
