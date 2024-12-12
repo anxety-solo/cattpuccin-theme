@@ -136,7 +136,7 @@ div.gradio-group>*:not(.absolute) {
 }
 
 .gradio-button:hover {
-  filter: brightness(108%);
+  filter: brightness(130%);
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -147,23 +147,30 @@ div.gradio-group>*:not(.absolute) {
   background: var(--ctp-subtext0);
 }
 
-input[type='range']::-ms-track {
+input[type='range']::-ms-track,
+input[type='range'].svelte-pc1gm4::-ms-track {
   background: transparent;
 }
 
-input[type='range']::-ms-fill-lower {
+input[type='range']::-ms-fill-lower,
+input[type='range'].svelte-pc1gm4::-ms-fill-lower {
   background: var(--ctp-accent);
   border-radius: 10px;
 }
-input[type='range']::-ms-fill-upper {
+
+input[type='range']::-ms-fill-upper,
+input[type='range'].svelte-pc1gm4::-ms-fill-upper {
   background: var(--ctp-overlay0);
   border-radius: 10px;
 }
 
-input[type='range']:focus::-ms-fill-lower {
+input[type='range']:focus::-ms-fill-lower,
+input[type='range'].svelte-pc1gm4:focus::-ms-fill-lower {
   background: var(--ctp-accent);
 }
-input[type='range']:focus::-ms-fill-upper {
+
+input[type='range']:focus::-ms-fill-upper,
+input[type='range'].svelte-pc1gm4:focus::-ms-fill-upper {
   background: var(--ctp-overlay0);
 }
 
@@ -224,23 +231,31 @@ input[type="checkbox"]:checked:focus {
   border-radius: var(--block-radius);
 }
 
-input[type='range'], input[type='radio'] {
+input[type='range'],
+input[type='range'].svelte-pc1gm4,
+input[type='radio'] {
   background-color: var(--ctp-surface1);
 }
 
-input[type='range']:hover, input[type='radio']:hover {
+input[type='range']:hover,
+input[type='range'].svelte-pc1gm4:hover,
+input[type='radio']:hover {
   background-color: var(--ctp-surface2);
 }
 
-input[type='range']:focus, input[type='radio']:focus {
+input[type='range']:focus,
+input[type='range'].svelte-pc1gm4:focus,
+input[type='radio']:focus {
   background-color: #32393B;
 }
 
-input[type='range'] {
+input[type='range'],
+input[type='range'].svelte-pc1gm4 {
   font-size: 1.5rem;
 }
 
-input[type='range'] {
+input[type='range'],
+input[type='range'].svelte-pc1gm4 {
   color: var(--accent);
   --thumb-height: 0.5em;
   --track-height: 0.125em;
@@ -250,37 +265,42 @@ input[type='range'] {
   --clip-edges: 0.125em;
 }
 
-input[type='range'].win10-thumb {
+input[type='range'].win10-thumb,
+input[type='range'].svelte-pc1gm4.win10-thumb {
   color: var(--ctp-accent);
-
   --thumb-height: 0.5em;
   --thumb-width: 0.5em;
   --clip-edges: 0.0125em;
 }
 
 @media (prefers-color-scheme: dark) {
-  input[type='range'] {
+  input[type='range'],
+  input[type='range'].svelte-pc1gm4 {
     color: var(--ctp-accent);
     --track-color: var(--ctp-surface0);
   }
 
-  input[type='range'].win10-thumb {
+  input[type='range'].win10-thumb,
+  input[type='range'].svelte-pc1gm4.win10-thumb {
     color: var(--ctp-accent);
   }
 }
 
 /* === range commons === */
-input[type='range'] {
+input[type='range'],
+input[type='range'].svelte-pc1gm4 {
   position: relative;
   background: #fff0;
   overflow: hidden;
 }
 
-input[type='range']:active {
+input[type='range']:active,
+input[type='range'].svelte-pc1gm4:active {
   cursor: grabbing;
 }
 
-input[type='range']:disabled {
+input[type='range']:disabled,
+input[type='range'].svelte-pc1gm4:disabled {
   filter: grayscale(1);
   opacity: 0.3;
   cursor: not-allowed;
@@ -288,19 +308,25 @@ input[type='range']:disabled {
 
 /* === WebKit specific styles === */
 input[type='range'],
+input[type='range'].svelte-pc1gm4,
 input[type='range']::-webkit-slider-runnable-track,
-input[type='range']::-webkit-slider-thumb {
+input[type='range'].svelte-pc1gm4::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb,
+input[type='range'].svelte-pc1gm4::-webkit-slider-thumb {
   -webkit-appearance: none;
   transition: all ease 100ms;
   height: var(--thumb-height);
 }
 
 input[type='range']::-webkit-slider-runnable-track,
-input[type='range']::-webkit-slider-thumb {
+input[type='range'].svelte-pc1gm4::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb,
+input[type='range'].svelte-pc1gm4::-webkit-slider-thumb {
   position: relative;
 }
 
-input[type='range']::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb,
+input[type='range'].svelte-pc1gm4::-webkit-slider-thumb {
   --thumb-radius: calc((var(--thumb-height) * 0.5) - 1px);
   --clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
   --clip-bottom: calc(var(--thumb-height) - var(--clip-top));
@@ -328,41 +354,52 @@ input[type='range']::-webkit-slider-thumb {
   );
 }
 
-input[type='range']:hover::-webkit-slider-thumb {
+input[type='range']:hover::-webkit-slider-thumb,
+input[type='range'].svelte-pc1gm4:hover::-webkit-slider-thumb {
   filter: brightness(var(--brightness-hover));
   cursor: grab;
 }
 
-input[type='range']:active::-webkit-slider-thumb {
+input[type='range']:active::-webkit-slider-thumb,
+input[type='range'].svelte-pc1gm4:active::-webkit-slider-thumb {
   filter: brightness(var(--brightness-down));
   cursor: grabbing;
 }
 
-input[type='range']::-webkit-slider-runnable-track {
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range'].svelte-pc1gm4::-webkit-slider-runnable-track {
   background: linear-gradient(var(--track-color) 0 0) scroll no-repeat center /
     100% calc(var(--track-height) + 1px);
 }
 
-input[type='range']:disabled::-webkit-slider-thumb {
+input[type='range']:disabled::-webkit-slider-thumb,
+input[type='range'].svelte-pc1gm4:disabled::-webkit-slider-thumb {
   cursor: not-allowed;
 }
 
 /* === Firefox specific styles === */
 input[type='range'],
+input[type='range'].svelte-pc1gm4,
 input[type='range']::-moz-range-track,
-input[type='range']::-moz-range-thumb {
+input[type='range'].svelte-pc1gm4::-moz-range-track,
+input[type='range']::-moz-range-thumb,
+input[type='range'].svelte-pc1gm4::-moz-range-thumb {
   appearance: none;
   transition: all ease 100ms;
   height: var(--thumb-height);
 }
 
 input[type='range']::-moz-range-track,
+input[type='range'].svelte-pc1gm4::-moz-range-track,
 input[type='range']::-moz-range-thumb,
-input[type='range']::-moz-range-progress {
+input[type='range'].svelte-pc1gm4::-moz-range-thumb,
+input[type='range']::-moz-range-progress,
+input[type='range'].svelte-pc1gm4::-moz-range-progress {
   background: #fff0;
 }
 
-input[type='range']::-moz-range-thumb {
+input[type='range']::-moz-range-thumb,
+input[type='range'].svelte-pc1gm4::-moz-range-thumb {
   background: currentColor;
   border: 0;
   width: var(--thumb-width, var(--thumb-height));
@@ -370,45 +407,55 @@ input[type='range']::-moz-range-thumb {
   cursor: grab;
 }
 
-input[type='range']:active::-moz-range-thumb {
+input[type='range']:active::-moz-range-thumb,
+input[type='range'].svelte-pc1gm4:active::-moz-range-thumb {
   cursor: grabbing;
 }
 
-input[type='range']::-moz-range-track {
+input[type='range']::-moz-range-track,
+input[type='range'].svelte-pc1gm4::-moz-range-track {
   width: 100%;
   background: var(--track-color);
 }
 
-input[type='range']::-moz-range-progress {
+input[type='range']::-moz-range-progress,
+input[type='range'].svelte-pc1gm4::-moz-range-progress {
   appearance: none;
   background: currentColor;
   transition-delay: 30ms;
 }
 
 input[type='range']::-moz-range-track,
-input[type='range']::-moz-range-progress {
+input[type='range'].svelte-pc1gm4::-moz-range-track,
+input[type='range']::-moz-range-progress,
+input[type='range'].svelte-pc1gm4::-moz-range-progress {
   height: calc(var(--track-height) + 1px);
   border-radius: var(--track-height);
 }
 
 input[type='range']::-moz-range-thumb,
-input[type='range']::-moz-range-progress {
+input[type='range'].svelte-pc1gm4::-moz-range-thumb,
+input[type='range']::-moz-range-progress,
+input[type='range'].svelte-pc1gm4::-moz-range-progress {
   filter: brightness(100%);
 }
 
 input[type='range']:hover::-moz-range-thumb,
-input[type='range']:hover::-moz-range-progress {
+input[type='range'].svelte-pc1gm4:hover::-moz-range-thumb,
+input[type='range']:hover::-moz-range-progress,
+input[type='range'].svelte-pc1gm4:hover::-moz-range-progress {
   filter: brightness(var(--brightness-hover));
 }
 
 input[type='range']:active::-moz-range-thumb,
-input[type='range']:active::-moz-range-progress {
+input[type='range'].svelte-pc1gm4:active::-moz-range-thumb,
+input[type='range']:active::-moz-range-progress,
+input[type='range'].svelte-pc1gm4:active::-moz-range-progress {
   filter: brightness(var(--brightness-down));
 }
 
-input[type='range']:disabled::-moz-range-thumb {
+input[type='range']:disabled::-moz-range-thumb,
+input[type='range'].svelte-pc1gm4:disabled::-moz-range-thumb {
   cursor: not-allowed;
 }
 
-/* all of the input range stuff is from this guy*/
-/* Shout out to them https://codepen.io/ShadowShahriar/pen/zYPPYrQ */
