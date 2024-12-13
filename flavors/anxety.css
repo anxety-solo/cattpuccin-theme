@@ -16,9 +16,9 @@
   --ctp-sapphire: #74c7ec;
   --ctp-lavender: #b4befe;
   --ctp-blue: #89b4fa;
-  --ctp-text: #E9EDEF;
   
   /* UI COLOR */
+  --ctp-text: #d1d5d7;
   --ctp-subtext1: #d3dce0;
   --ctp-subtext0: #bbc2c6;
   --ctp-overlay2: #9399b2;
@@ -39,6 +39,7 @@
 .dark {
   --body-background-fill: var(--background-fill-primary);
   --body-text-color: var(--ctp-subtext0);
+  --body-text-color-subdued: var(--ctp-subtext1);
   --color-accent-soft: var(--ctp-surface0);
   --background-fill-primary: var(--ctp-mantle);
   --background-fill-secondary: var(--ctp-base);
@@ -48,8 +49,7 @@
   --link-text-color: var(--ctp-subtext0);
   --link-text-color-hover: var(--ctp-accent);
   --link-text-color-visited: var(--ctp-subtext0);
-  --body-text-color-subdued: var(--ctp-subtext0);
-  --shadow-spread: 1px;
+  --shadow-spread: 0px;
   --block-background-fill: var(--ctp-mantle);
   --block-border-color: var(--border-color-primary);
   --block-border-width: None;
@@ -87,6 +87,7 @@
   --error-border-color: var(--border-color-primary);
   --error-border-width: None;
   --error-text-color: var(--ctp-red);
+  --error-icon-color: var(--ctp-accent);
   --input-background-fill: var(--ctp-base);
   --input-background-fill-focus: var(--input-background-fill);
   --input-background-fill-hover: var(--input-background-fill);
@@ -96,13 +97,10 @@
   --input-border-width: None;
   --input-placeholder-color: var(--ctp-surface1);
   --input-shadow: None;
-  --input-shadow-focus: 0 0 0 var(--shadow-spread) var(--ctp-surface1),
-    var(--shadow-inset);
+  --input-shadow-focus: 0 0 0 var(--shadow-spread) var(--ctp-surface1), var(--shadow-inset);
   --loader-color: var(--ctp-accent);
   --slider-color: None;
-  --stat-background-fill: linear-gradient(to right,
-      var(--primary-400),
-      var(--primary-600));
+  --stat-background-fill: linear-gradient(to right, var(--primary-400), var(--primary-600));
   --table-border-color: var(--ctp-surface1);
   --table-even-background-fill: var(--neutral-950);
   --table-odd-background-fill: var(--neutral-900);
@@ -128,17 +126,35 @@
   --button-secondary-text-color-hover: var(--button-secondary-text-color);
 }
 
-#txt2img_interrupt,
-#txt2img_skip {
-	background-color: var(--ctp-surface2);
+/* Gradio Button Color */
+.gradio-button.generate-box-skip,
+.gradio-button.generate-box-interrupt  {
+  background-color: var(--ctp-overlay2);
+  color: var(--ctp-base);
   transition: all 0.1s ease;
 }
-
-#txt2img_interrupt:hover,
-#txt2img_skip:hover {
-	background-color: var(--ctp-surface1);
+.gradio-button.generate-box-skip:hover,
+.gradio-button.generate-box-interrupt:hover {
+  background-color: var(--ctp-overlay0);
+  color: var(--ctp-base);
 }
 
+#txt2img_skip, #img2img_skip {
+  border-left: solid 1px var(--ctp-base); /* button border */
+}
+
+.gradio-button.generate-box-interrupting  {
+  background-color: var(--ctp-peach);
+  color: var(--ctp-base);
+  transition: all 0.1s ease;
+}
+.gradio-button.generate-box-interrupting:hover  {
+  background-color: var(--ctp-peach);
+  color: var(--ctp-base);
+}
+
+
+/* OTHER */
 div.gradio-group>*:not(.absolute) {
   border-radius: 8px !important;
   margin-bottom: 7px !important;
@@ -149,7 +165,7 @@ div.gradio-group>*:not(.absolute) {
 }
 
 .gradio-button:hover {
-  filter: brightness(120%);
+  filter: brightness(125%);
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -171,6 +187,7 @@ input[type="number"]:not([step="any"])::-webkit-outer-spin-button {
 
 input[type="checkbox"] {
   border: transparent !important;
+  cursor: pointer;
 }
 
 input[type="checkbox"]:checked,

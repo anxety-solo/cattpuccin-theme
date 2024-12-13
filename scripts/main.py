@@ -58,8 +58,6 @@ def on_flavor_change():
     on_accent_change()
 
 def on_settings():
-    on_flavor_change() # First Setup
-
     opts.add_option(
         "ctp_flavor",
         OptionInfo(
@@ -85,5 +83,7 @@ def on_settings():
             category_id="ui",
         ),
     )
+    
+    on_flavor_change()  # First Setup
 
 on_ui_settings(on_settings)
